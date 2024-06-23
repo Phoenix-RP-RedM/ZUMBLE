@@ -102,4 +102,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags || steps.metaAll.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels || steps.metaAll.outputs.labels }}
-          target: BASE
