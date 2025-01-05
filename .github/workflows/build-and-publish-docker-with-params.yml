@@ -48,12 +48,12 @@ jobs:
         uses: actions/checkout@v4
 
       # Checkout all the repositories (depends on the inputs)
-      - name: Checkout Phoenix-Bot
+      - name: Checkout ZUMBLE
         uses: actions/checkout@v4
         with:
-          repository: Phoenix-RP-RedM/Phoenix-Bot
+          repository: Phoenix-RP-RedM/ZUMBLE
           ref: ${{ inputs.branchToDeploy }}
-          path: Phoenix/Phoenix-Bot
+          path: Phoenix/ZUMBLE
           token: ${{ secrets.PHOENIX_BUILD_IMG }}
 
 
