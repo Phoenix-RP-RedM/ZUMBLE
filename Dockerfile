@@ -10,7 +10,7 @@ COPY . /zumble-build
 
 WORKDIR /zumble-build
 
-RUN openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout /key.pem -out /cert.pem -subj "/C=FR/ST=Paris/L=Paris/O=SoZ/CN=soz.zerator.com"
+RUN openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout /key.pem -out /cert.pem -subj "/C=FR/ST=Paris/L=Paris/O=Phoenix/CN=voip.cendres-incandescentes.fr"
 
 RUN --mount=type=cache,target=/usr/local/cargo,from=rust,source=/usr/local/cargo \
     --mount=type=cache,target=target \
@@ -30,4 +30,4 @@ ENV RUST_LOG=info
 ENV HTTP_USER=RePlAcEmE!$
 ENV HTTP_PASSWORD=RePlAcEmE!$
 
-CMD ["/zumble", " --http-user", "$HTTP_USER", "--http-password", "$HTTP_PASSWORD"]
+CMD ["/zumble", "--http-user", "$HTTP_USER", "--http-password", "$HTTP_PASSWORD"]
